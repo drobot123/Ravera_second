@@ -1,9 +1,9 @@
 <header id="site-header" class="site-header" role="banner">
     <div class="container">
         <div class="site-logo-wrap">
-            <hgroup>
-                <h1 class='site-title site-title-no-desc'> <a  style="color:#FFFFFF;" href='{{ route('home') }}' title='{{ config('app.name', 'Laravel Shops') }}' rel='home'>{{ config('app.name', 'Laravel Shops') }}</a></h1>
-            </hgroup>
+            <hgroup> <a href='{{ route('home') }}'>
+                <h1 class='site-title site-title-no-desc'><img href='{{ route('home') }}' class="logo-style" src="{{ asset('assets/images/logoR.png') }}"> <a  style="font-size: 25px !important;color:#FFFFFF;" href='{{ route('home') }}' title='{{ config('app.name', 'Laravel Shops') }}' rel='home'>{{ config('app.name', 'Laravel Shops') }}</a></h1>
+            </a>     </hgroup>
         </div>
         <nav id="primary-nav" class="primary-nav" role="navigation">
             <ul id="menu-gd-menu" class="menu">

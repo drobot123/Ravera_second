@@ -227,10 +227,9 @@ table.dataTable thead .sorting_desc {
 }
 .btn:not(:disabled):not(.disabled):hover {
     scale: 1.04;
-
 }
 .btn-primary {
-    border:none !important;
+    border: none !important;
 }
 .container-fluid {
     animation-duration: 0.5s;
@@ -366,7 +365,7 @@ table.dataTable tbody tr {
 .card-body {
     -webkit-box-flex: 1;
     flex: 1 1 auto;
-    padding: 0.25rem 1.25rem !important;
+    padding: 1.25rem 1.25rem !important;
 }
 div.dataTables_wrapper div.dataTables_info {
     background: #323463;
@@ -442,7 +441,7 @@ table.dataTable tbody td {
     height: 100vh;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .background em {
@@ -637,3 +636,43 @@ table.dataTable tr.selected th.select-checkbox::after {
 
     color: red !important;
 } */
+.site-header {
+    background-color: #16172d !important;
+    color: #fff;
+    border-radius: 50px !important;
+    margin: 3px 10px;
+}
+.btn-link:hover {
+    text-decoration: none !important;
+    color: #787ce5 !important;
+}
+.text-muted {
+    color: #ffffff !important;
+    text-align: center;
+    font-size: 22px;
+}
+.input-group > .custom-select:not(:first-child),
+.input-group > .form-control:not(:first-child) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.input-group-text {
+    background-color: #36377e;
+    border: none !important;
+}
+.fa-user:before,
+.fa-lock:before {
+    color: white;
+}
+.btn-primary:focus {
+    box-shadow: none !important;
+}
+.btn-primary {
+    background-color: #35387e !important;
+}
+.header-fixed .app-header {
+    position: relative !important;
+}
+.header-fixed .app-body {
+    margin-top: 0 !important;
+}

@@ -1,9 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
+<div class="background">
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-13" style="margin-top: 100px">
             <div class="content-box content-single">
                 <article class="post-180 gd_place type-gd_place status-publish hentry gd_placecategory-hotels">
                     <header>
@@ -49,7 +50,7 @@
                                         <div id="geodir-tab-content-post_content" class="hash-offset"></div>
                                         <div class="geodir-post-meta-container">
                                             <div class="geodir_post_meta  geodir-field-post_content">
-                                                <p>Address: {{ $shop->address }}</p>
+                                                <p>Address:</p><span>{{ $shop->address }}</span>
                                                 <p>Description: {{ $shop->description }}</p>
                                                 @if($shop->days->count())
                                                     @if($shop->working_hours->currentOpenRange(now()))
@@ -83,7 +84,7 @@
                                     @endif
                                     @if($shop->latitude && $shop->longitude)
                                         <li id="post_mapTab" style="display: none;">
-                                            <div id="map-canvas" style="height: 425px; width: 100%; position: relative; overflow: hidden;">
+                                            <div id="map-canvas" style="height:100vh; width: 100%; position: relative; overflow: hidden;">
                                             </div>
                                         </li>
                                     @endif
@@ -99,9 +100,9 @@
                         </div>
                         <div class="geodir-single-taxonomies-container">
                             <div class="geodir-pos_navigation clearfix">
-                                <div class="geodir-post_left">
-                                    <a href="{{ url()->previous() }}" rel="prev">Back</a>
-                                </div>
+                                <a href="{{ url()->previous() }}" rel="prev"><div class="geodir-post_left">
+                                    Back
+                                </div></a>
                             </div>
                         </div>
                     </div>
@@ -110,6 +111,21 @@
             </div>
         </div>
     </div>
+</div>
+<em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
+    <em></em>
 </div>
 @endsection
 

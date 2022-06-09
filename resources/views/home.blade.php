@@ -4,11 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="content-box content-single">
+            <div class="content-box content-single" style="border:none !important;">
                 <article class="post-8 page type-page status-publish hentry">
                     <header>
                         <h1 class="entry-title">{{ request()->filled('search') || request()->filled('category') ? 'Search results' : 'All Shops' }}</h1></header>
-                    <div class="entry-content entry-summary">
+                    <div class="entry-content entry-summary" style="height:100%;">
                         <div class="geodir-search-container geodir-advance-search-default" data-show-adv="default">
                             <form class="geodir-listing-search gd-search-bar-style" name="geodir-listing-search" action="{{ route('home') }}" method="get">
                                 <div class="geodir-loc-bar">
@@ -23,7 +23,7 @@
                                                 </select>
                                             </div>
                                             <div class='gd-search-input-wrapper gd-search-field-search'> <span class="geodir-search-input-label"><i class="fas fa-search gd-show"></i><i class="fas fa-times geodir-search-input-label-clear gd-hide" title="Clear field"></i></span>
-                                                <input class="search_text gd_search_text" name="search" value="{{ old('search', request()->input('search')) }}" type="text" placeholder="Search for" aria-label="Search for" autocomplete="off" />
+                                                <input class="search_text gd_search_text" name="search" value="{{ old('search', request()->input('search')) }}" type="text" placeholder="Поиск" aria-label="Search for" autocomplete="off" />
                                             </div>
                                             <button class="geodir_submit_search" data-title="fas fa-search" aria-label="fas fa-search"><i class="fas fas fa-search" aria-hidden="true"></i><span class="sr-only">Search</span></button>
                                         </div>
@@ -31,7 +31,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="geodir-loop-container">
+                        <div class="geodir-loop-container" id="shop_scroll" style="height: calc(100% - 200px); overflow-y: scroll;">
                             <ul class="geodir-category-list-view clearfix gridview_onethird geodir-listing-posts geodir-gridview gridview_onethird">
                                 @foreach($shops as $shop)
                                     <li class="gd_place type-gd_place status-publish has-post-thumbnail">
@@ -42,7 +42,7 @@
                                                         <ul class="geodir-post-image geodir-images clearfix">
                                                             <li>
                                                                 <a href='{{ route('shop', $shop->id) }}'>
-                                                                    <img src="{{ $shop->thumbnail }}" width="1440" height="960" class="geodir-lazy-load align size-medium_large" />
+                                                                    <img src="https://www.artmediconsult.ru/wp-content/uploads/2015/08/test.jpg" width="1440" height="960" class="geodir-lazy-load align size-medium_large" />
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -52,7 +52,7 @@
                                         </div>
                                         <div class="gd-list-item-right ">
                                             <div class="geodir-post-title">
-                                                <h2 class="geodir-entry-title"> <a href="{{ route('shop', $shop->id) }}" title="View: {{ $shop->name }}">{{ $shop->name }}</a></h2></div>
+                                                <h2 class="geodir-entry-title"> <a href="{{ route('shop', $shop->id) }}">{{ $shop->name }}</a></h2></div>
                                             @foreach($shop->categories as $category)
                                                 <div class="gd-badge-meta gd-badge-alignleft" title="{{ $category->name }}">
                                                     <div class="gd-badge" style="background-color:#ffb100;color:#ffffff;"><i class="fas fa-certificate"></i> <span class='gd-secondary'>{{ $category->name }}</span></div>
